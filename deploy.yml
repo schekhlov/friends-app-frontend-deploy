@@ -1,0 +1,12 @@
+---
+- name: Deploy friends-app-backend
+  hosts: app-servers
+  become: true
+  become_user: "root"
+  vars:
+    image_tag: "{{ GIT_BRANCH|default('latest') }}"
+    docker_repo: "753380798922.dkr.ecr.eu-central-1.amazonaws.com/friends-app/frontend"
+    container_name: "friends-app-frontend"
+    docker_network_name: "friends-app-network"
+  roles:
+    - frontend
