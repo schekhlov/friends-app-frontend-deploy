@@ -1,5 +1,5 @@
 ---
-- name: Deploy friends-app-backend
+- name: Deploy friends-app-frontend
   hosts: app-servers
   become: true
   become_user: "root"

@@ -20,6 +20,6 @@
     name: "{{ container_name }}"
     image: "{{ docker_repo }}:{{ image_tag }}"
     ports:
-     - "127.0.0.1:80:3001"
+     - "127.0.0.1:3001:80"
     networks:
      - name: "{{ docker_network_name }}"
